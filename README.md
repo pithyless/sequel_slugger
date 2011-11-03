@@ -38,6 +38,13 @@ Update your Sequel model:
                        :update => false
     end
 
+Hacking
+-------
+
+    % git clone https://github.com/pithyless/sequel_slugger
+    % bundle install
+    % bundle exec rake test
+
 
 Credits
 -------
