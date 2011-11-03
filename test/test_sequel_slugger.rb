@@ -37,6 +37,12 @@ describe "Slugger" do
   }.equals('gunther-and-friends')
 end
 
+context 'Handling different inputs' do
+  setup { Item.plugin :slugger, :source => :name }
+  asserts { Item.new(:name => nil).slug }.nil
+  asserts { Item.create(:name => nil).slug }.nil
+end
+
 # TODO: :source can be Proc
 
 context 'options handling' do

@@ -57,7 +57,7 @@ module Sequel
 
         def to_slug(value)
           # TODO: use Stringex#to_url without polluting ruby String
-          value.to_url # Stringex
+          value.to_url if value.respond_to?(:to_url) # Stringex
         end
 
         def set_target_column
